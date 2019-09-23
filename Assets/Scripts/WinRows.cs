@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class WinRows
 {
+    //all winnig combenations
     public static readonly int[][] winningRows = new int[8][]
     {
         new int[] {0, 1, 2},        //0
@@ -16,6 +17,7 @@ public static class WinRows
         new int[] {2, 4, 6},        //7
     };
 
+    //lists of rows (in winningRows) for eatch cell
     public static readonly int[][] winnigNumbsForCell = new int[9][]
     {
         new int[] { 0, 6, 3 },

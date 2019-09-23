@@ -12,9 +12,10 @@ public class ComputerController
 
         int isFilledByOpponent = 0, isFilled = 0;
         int secondVariant = 0;
-        int variant = 0;
+        int variant = 0, nextCellIter = 0;
         bool isVariant = false;
         bool isSecondVariant = false;
+        bool isNext = false;
 
         //
         for (int i = 0; i < WinRows.winningRows.Length; i++)
@@ -53,9 +54,15 @@ public class ComputerController
 
             if (isFilledByOpponent == 2 && isVariant)
             {
-                return variant;
+                nextCellIter = variant;
+                isNext = true;
             }
-            
+
+            if (i == WinRows.winningRows.Length - 1 && isNext)
+            {
+                return nextCellIter;
+            }
+
             else if (isFilled == 1)
             {
                 secondVariant = variant;
